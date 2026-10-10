@@ -1,13 +1,19 @@
-﻿using System;
+﻿using prueba1.Iterator;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace prueba1
 {
-    public class Pila:Coleccionable{
+    public class Pila:Coleccionable, Iterable{
         private List<Comparable> elementos;
         public Pila(){
             this.elementos = new List<Comparable>();
+        }
+
+        public Iterador crearIterador()
+        {
+            return new IteradorPila(elementos);
         }
 
         public void apilar(Comparable c){

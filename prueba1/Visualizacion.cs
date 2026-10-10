@@ -14,9 +14,10 @@ namespace prueba1
         }
 
         public bool sosIgual(Comparable c){
-            Visualizacion v = (Visualizacion)c;
-            if (this.cantidad == v.getcantidad()){
-                return true;
+            
+            if (c is Visualizacion){
+                Visualizacion v = (Visualizacion)c;
+                return this.cantidad == v.getcantidad();
             }
             else{
                 return false;
@@ -24,9 +25,10 @@ namespace prueba1
         }
 
         public bool sosMenor(Comparable c){
-            Visualizacion v = (Visualizacion)c;
-            if (this.cantidad < v.getcantidad()){
-                return true;
+            
+            if (c is Visualizacion){
+                Visualizacion v = (Visualizacion)c;
+                return this.cantidad < v.getcantidad();
 
             }
             else {
@@ -35,9 +37,10 @@ namespace prueba1
         }
 
         public bool sosMayor(Comparable c){
-            Visualizacion v = (Visualizacion)c;
-            if (this.cantidad > v.getcantidad()){
-                return true;
+            
+            if (c is Visualizacion){
+                Visualizacion v = (Visualizacion)c;
+                return this.cantidad > v.getcantidad();
 
             }
             else{

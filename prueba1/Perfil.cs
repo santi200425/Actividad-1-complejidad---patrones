@@ -54,5 +54,10 @@ namespace prueba1
             return false;
         }
 
+        public override string ToString()
+        {
+            return "nombre: " + this.nombre + ", id: " + this.id;
+        }
+
     }
 }

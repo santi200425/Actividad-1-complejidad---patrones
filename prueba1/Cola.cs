@@ -1,15 +1,21 @@
-﻿using System;
+﻿using prueba1.Iterator;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace prueba1
 {
-    public class Cola:Coleccionable{
+    public class Cola:Coleccionable, Iterable{
         private List<Comparable> elementos;
 
         public Cola()
         {
             this.elementos = new List<Comparable>();
+        }
+
+        public Iterador crearIterador()
+        {
+            return new IteradorCola(elementos);
         }
 
         public void encolar(Comparable c)
